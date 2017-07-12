@@ -14,11 +14,13 @@ public class ClickRelativeTest extends IntegrationTest {
     openFile("page_with_relative_click_position.html");
   }
 
+
   @Test
   public void userCanClickElementWithOffsetPosition() {
     $(By.id("page")).click(123, 321);
     $(By.id("coords")).shouldHave(Condition.matchText("(123, 321)"));
   }
+
 
   @Test
   public void userCanClickElementWithOffsetPositionWithJavascript() {
